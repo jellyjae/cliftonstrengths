@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    /* Updated color palette to welcoming matcha-inspired theme */
+    --background: 255 255 255; /* Pure white for a clean canvas */
+    --foreground: 0 0 0; /* Pure black for maximum contrast */
+    --card: 240 244 225; /* Light matcha cream for cards */
+    --card-foreground: 0 0 0; /* Pure black for card text */
+    --popover: 255 255 255; /* White for popover background */
+    --popover-foreground: 0 0 0; /* Pure black for popover text */
+    --primary: 178 217 156; /* Soft matcha green for primary actions */
+    --primary-foreground: 0 0 0; /* Pure black for text on primary elements */
+    --secondary: 163 201 168; /* Gentle sage green for secondary actions */
+    --secondary-foreground: 0 0 0; /* Pure black for text on secondary elements */
+    --muted: 240 244 225; /* Light matcha cream for muted elements */
+    --muted-foreground: 0 0 0; /* Pure black for muted text (maximum visibility) */
+    --accent: 163 201 168; /* Gentle sage green for accents */
+    --accent-foreground: 0 0 0; /* Pure black for accent text */
+    --destructive: 234 88 12; /* Orange for destructive actions */
+    --destructive-foreground: 255 255 255; /* White for text on destructive elements */
+    --border: 224 224 224; /* Light gray for borders */
+    --input: 255 255 255; /* White for input fields */
+    --ring: 178 217 156; /* Soft matcha green for focus rings */
+    --chart-1: 178 217 156; /* Soft matcha green for charts */
+    --chart-2: 163 201 168; /* Gentle sage green for charts */
+    --chart-3: 240 244 225; /* Light matcha cream for charts */
+    --chart-4: 31 41 55; /* Dark charcoal for charts */
+    --chart-5: 255 255 255; /* Pure white for charts */
+    --radius: 0.75rem; /* Slightly more rounded corners for a softer aesthetic */
+    --sidebar-background: 240 244 225; /* Light matcha cream for sidebar */
+    --sidebar-foreground: 0 0 0; /* Pure black for sidebar text */
+    --sidebar-primary: 178 217 156; /* Soft matcha green for primary sidebar elements */
+    --sidebar-primary-foreground: 0 0 0; /* Pure black for sidebar primary text */
+    --sidebar-accent: 163 201 168; /* Gentle sage green for sidebar accents */
+    --sidebar-accent-foreground: 0 0 0; /* Pure black for sidebar accent text */
+    --sidebar-border: 224 224 224; /* Light gray for sidebar borders */
+    --sidebar-ring: 178 217 156; /* Soft matcha green for sidebar focus rings */
+  }
+
+  .dark {
+    --background: 31 41 55; /* Dark charcoal for dark mode background */
+    --foreground: 249 250 251; /* Light gray for dark mode text */
+    --card: 55 65 81; /* Darker card background */
+    --card-foreground: 249 250 251; /* Light text on dark cards */
+    --popover: 31 41 55; /* Dark popover background */
+    --popover-foreground: 249 250 251; /* Light popover text */
+    --primary: 134 189 96; /* Darker matcha green for dark mode */
+    --primary-foreground: 249 250 251; /* Dark text on primary elements */
+    --secondary: 107 142 112; /* Darker sage green */
+    --secondary-foreground: 249 250 251; /* Light text on secondary elements */
+    --muted: 55 65 81; /* Dark muted background */
+    --muted-foreground: 156 163 175; /* Light muted text */
+    --accent: 107 142 112; /* Dark accent color */
+    --accent-foreground: 249 250 251; /* Light accent text */
+    --destructive: 220 38 38; /* Dark mode destructive color */
+    --destructive-foreground: 249 250 251; /* Light text on destructive elements */
+    --border: 75 85 99; /* Dark border color */
+    --input: 55 65 81; /* Dark input background */
+    --ring: 134 189 96; /* Dark mode focus ring */
+    --chart-1: 134 189 96; /* Dark mode chart colors */
+    --chart-2: 107 142 112;
+    --chart-3: 75 85 99;
+    --chart-4: 156 163 175;
+    --chart-5: 31 41 55;
+    --sidebar-background: 55 65 81;
+    --sidebar-foreground: 249 250 251;
+    --sidebar-primary: 134 189 96;
+    --sidebar-primary-foreground: 249 250 251;
+    --sidebar-accent: 107 142 112;
+    --sidebar-accent-foreground: 249 250 251;
+    --sidebar-border: 75 85 99;
+    --sidebar-ring: 134 189 96;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    /* Added font-sans for consistent typography */
+  }
+}
