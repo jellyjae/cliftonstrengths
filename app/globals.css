@@ -10,63 +10,62 @@
 
 @layer base {
   :root {
-    /* Updated color palette to welcoming matcha-inspired theme */
-    --background: 0 0% 100%; /* Pure white for a clean canvas */
-    --foreground: 0 0% 0%; /* Pure black for maximum contrast */
-    --card: 60 25% 92%; /* Light matcha cream for cards */
-    --card-foreground: 0 0% 0%; /* Pure black for card text */
-    --popover: 0 0% 100%; /* White for popover background */
-    --popover-foreground: 0 0% 0%; /* Pure black for popover text */
-    --primary: 90 35% 73%; /* Soft matcha green for primary actions */
-    --primary-foreground: 0 0% 0%; /* Pure black for text on primary elements */
-    --secondary: 120 20% 71%; /* Gentle sage green for secondary actions */
-    --secondary-foreground: 0 0% 0%; /* Pure black for text on secondary elements */
-    --muted: 60 25% 92%; /* Light matcha cream for muted elements */
-    --muted-foreground: 0 0% 0%; /* Pure black for muted text (maximum visibility) */
-    --accent: 120 20% 71%; /* Gentle sage green for accents */
-    --accent-foreground: 0 0% 0%; /* Pure black for accent text */
-    --destructive: 20 84% 48%; /* Orange for destructive actions */
-    --destructive-foreground: 0 0% 100%; /* White for text on destructive elements */
-    --border: 0 0% 88%; /* Light gray for borders */
-    --input: 0 0% 100%; /* White for input fields */
-    --ring: 90 35% 73%; /* Soft matcha green for focus rings */
-    --chart-1: 90 35% 73%; /* Soft matcha green for charts */
-    --chart-2: 120 20% 71%; /* Gentle sage green for charts */
-    --chart-3: 60 25% 92%; /* Light matcha cream for charts */
-    --chart-4: 220 26% 17%; /* Dark charcoal for charts */
-    --chart-5: 0 0% 100%; /* Pure white for charts */
-    --radius: 0.75rem; /* Slightly more rounded corners for a softer aesthetic */
-    --sidebar-background: 60 25% 92%; /* Light matcha cream for sidebar */
-    --sidebar-foreground: 0 0% 0%; /* Pure black for sidebar text */
-    --sidebar-primary: 90 35% 73%; /* Soft matcha green for primary sidebar elements */
-    --sidebar-primary-foreground: 0 0% 0%; /* Pure black for sidebar primary text */
-    --sidebar-accent: 120 20% 71%; /* Gentle sage green for sidebar accents */
-    --sidebar-accent-foreground: 0 0% 0%; /* Pure black for sidebar accent text */
-    --sidebar-border: 0 0% 88%; /* Light gray for sidebar borders */
-    --sidebar-ring: 90 35% 73%; /* Soft matcha green for sidebar focus rings */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --card: 60 25% 92%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 90 35% 73%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 120 20% 71%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 60 25% 92%;
+    --muted-foreground: 0 0% 0%;
+    --accent: 120 20% 71%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 20 84% 48%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 88%;
+    --input: 0 0% 100%;
+    --ring: 90 35% 73%;
+    --chart-1: 90 35% 73%;
+    --chart-2: 120 20% 71%;
+    --chart-3: 60 25% 92%;
+    --chart-4: 220 26% 17%;
+    --chart-5: 0 0% 100%;
+    --radius: 0.75rem;
+    --sidebar-background: 60 25% 92%;
+    --sidebar-foreground: 0 0% 0%;
+    --sidebar-primary: 90 35% 73%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 120 20% 71%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 0 0% 88%;
+    --sidebar-ring: 90 35% 73%;
   }
 
   .dark {
-    --background: 220 26% 17%; /* Dark charcoal for dark mode background */
-    --foreground: 210 20% 98%; /* Light gray for dark mode text */
-    --card: 220 13% 27%; /* Darker card background */
-    --card-foreground: 210 20% 98%; /* Light text on dark cards */
-    --popover: 220 26% 17%; /* Dark popover background */
-    --popover-foreground: 210 20% 98%; /* Light popover text */
-    --primary: 90 40% 56%; /* Darker matcha green for dark mode */
-    --primary-foreground: 210 20% 98%; /* Dark text on primary elements */
-    --secondary: 120 15% 49%; /* Darker sage green */
-    --secondary-foreground: 210 20% 98%; /* Light text on secondary elements */
-    --muted: 220 13% 27%; /* Dark muted background */
-    --muted-foreground: 215 16% 65%; /* Light muted text */
-    --accent: 120 15% 49%; /* Dark accent color */
-    --accent-foreground: 210 20% 98%; /* Light accent text */
-    --destructive: 0 84% 51%; /* Dark mode destructive color */
-    --destructive-foreground: 210 20% 98%; /* Light text on destructive elements */
-    --border: 215 16% 34%; /* Dark border color */
-    --input: 220 13% 27%; /* Dark input background */
-    --ring: 90 40% 56%; /* Dark mode focus ring */
-    --chart-1: 90 40% 56%; /* Dark mode chart colors */
+    --background: 220 26% 17%;
+    --foreground: 210 20% 98%;
+    --card: 220 13% 27%;
+    --card-foreground: 210 20% 98%;
+    --popover: 220 26% 17%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 90 40% 56%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 120 15% 49%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 220 13% 27%;
+    --muted-foreground: 215 16% 65%;
+    --accent: 120 15% 49%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 84% 51%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 16% 34%;
+    --input: 220 13% 27%;
+    --ring: 90 40% 56%;
+    --chart-1: 90 40% 56%;
     --chart-2: 120 15% 49%;
     --chart-3: 215 16% 34%;
     --chart-4: 215 16% 65%;
@@ -88,6 +87,5 @@
   }
   body {
     @apply bg-background text-foreground font-sans;
-    /* Added font-sans for consistent typography */
   }
 }
