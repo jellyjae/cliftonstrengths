@@ -14,6 +14,18 @@ export async function GET(request: NextRequest) {
       }, { status: 500 })
     }
 
+    // Validate URL format before creating client
+    try {
+      new URL(process.env.NEXT_PUBLIC_SUPABASE_URL)
+    } catch (error) {
+      return NextResponse.json({ 
+        error: "Invalid URL format",
+        details: `Supabase URL is not a valid URL: ${error instanceof Error ? error.message : "Unknown error"}`,
+        urlPrefix: process.env.NEXT_PUBLIC_SUPABASE_URL?.substring(0, 50) + "...",
+        expectedFormat: "https://your-project-id.supabase.co"
+      }, { status: 500 })
+    }
+
     const supabase = await createClient()
     
     // Test basic connection
