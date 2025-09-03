@@ -78,7 +78,9 @@ export default function OnboardingPage() {
       router.push("/")
     } catch (error) {
       console.error("Error saving strengths:", error)
-      setError("Unable to save your selections. Please try again.")
+      const errorMessage = error instanceof Error ? error.message : "Unknown error"
+      console.error("Detailed error:", errorMessage)
+      setError(`Unable to save your selections: ${errorMessage}. Please try again.`)
     } finally {
       setSaving(false)
     }

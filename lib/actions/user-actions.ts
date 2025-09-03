@@ -76,6 +76,13 @@ export async function getUserStrengths(deviceId: string): Promise<{
 export async function createUserProfile(deviceId: string, strengths: Array<{ theme_id: string; rank: number }>) {
   try {
     console.log("[v0] Creating/updating user profile for device:", deviceId)
+    console.log("[v0] Strengths to save:", strengths)
+
+    // Check environment variables
+    if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+      console.error("[v0] Missing Supabase environment variables")
+      return { error: "Database connection not configured" }
+    }
 
     const supabase = await createClient()
 
@@ -124,6 +131,8 @@ export async function createUserProfile(deviceId: string, strengths: Array<{ the
     return { success: true }
   } catch (error) {
     console.error("[v0] Error in createUserProfile:", error)
-    return { error: "Failed to create user profile" }
+    const errorMessage = error instanceof Error ? error.message : "Unknown error"
+    console.error("[v0] Detailed error message:", errorMessage)
+    return { error: `Failed to create user profile: ${errorMessage}` }
   }
 }
